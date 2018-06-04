@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+    <div id="map"></div>
+    <h3>Top 5 personal choices of Resturants</h3>
+    <div id="Resturants"><button>Food</button></div>
+    <h3>Top 5 places to have a nice drink</h3>
+    <div id="Drinks"><button>Drinks</button></div>
+    <div id="Clear"><button>Clear</button></div>
+</body>
+
+<script>
+    function initMap() {
+        // var map = new google.maps.Map(document.getElementById('map'), {
+        //     zoom: 9,
+        //     center: { lng: -6.259117, lat: 53.338253 }
+        // });
+
+        // var marker = new google.maps.Marker({});
+        
+        // marker.infowindow = new google.maps.InfoWindow({
+        //     content: 'An InfoWindow'
+        // });
+
+
+        //var labels = "123456789";
+
+        var active_markers = [];
+        
+        var location_types = [{
+            name: "Restaurants",
+            locations: [
+                { name: "Fish", position: { lat: 53.289284, lng: -6.125384 } }, // Fish Shake Cafe
+                { name: "Daniel", position: {lat: 53.286649, lng: -6.121777} }, // Daniel's 
+                { name: "Toners", position: {lat: 53.337757, lng: -6.252428} }, // Toners 
+                { name: "Doheny", position: {lat: 53.338024, lng: -6.252970} }, // Doheny & Nesbitt
+                { name: "Hogans", position: {lat: 53.341978, lng: -6.264605} }, // Hogans
+                { name: "Fade", position: {lat: 53.342971, lng: -6.262812} }, // Fade Street Social Restaurant 
+                { name: "Peruke", position: {lat: 53.340099, lng: -6.258775} } // Peruke & Periwig
+            ]
+        }]
+            ;
+
+        // var markers = locations.map(function(location, i) {
+        //     return new google.maps.Marker({
+        //         position: location,
+        //         //label: labels[i % labels.length]
+        //     });
+        // });
+       
+        function add_marker(map, location){
+            var marker = new google.maps.Marker({
+                position: location.position,
+                map: map,
+                title: location.name
+            });
+
+            var infowindow = new google.maps.InfoWindow({
+                content: location.name
+            });
+            
+            marker.addListener('click', function() {
+              infowindow.open(map, marker);
+            });
+            
+            active_markers.push(marker);
+        }
+
+        function setup(){
+            console.log("setting up")
+            
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 9,
+                center: { lng: -6.259117, lat: 53.338253 }
+            });
+        
+            for (var i = 0; i < location_types[0].locations.length; i++) { 
+                add_marker(map, location_types[0].locations[i]);
+            }
+        }
+        
+        function clear_all_markers(){
+            console.log("clearing markers");
+            for (var i = 0; i < active_markers.length; i++) { 
+                var marker = active_markers[i];
+                marker.setMap(null);
+            }
+            active_markers = [];
+        }
+        
+        
+        setup();
+
+        $("#Clear").click(function() {
+            clear_all_markers();
+            
+
+        });
+        
+        $("#Resturants").click(function() {
+            // map.setZoom(14);
+            // map.setCenter({ lng: -6.12177, lat: 53.289284 });
+            console.log("did This run");
+            
+
+        });
+
+        $("#Drinks").click(function() {
+            map.setZoom(15);
+
+            map.setCenter({ lng: -6.258575, lat: 53.338978 });
+            console.log("did This run too");
+        });
+
+    }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNe6UmR7Cb_o__XnRezEUk17J7li0-Xhg&callback=initMap"></script>
+
+
+</html>

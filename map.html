@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+    <div id="map"></div>
+    <h3>Top 5 personal choices of Resturants</h3>
+    <div id="Resturants"><button>Food</button></div>
+    <h3>Top 5 places to have a nice drink</h3>
+    <div id="bandr"><button>Drinks</button></div>
+    <h3>Top 5 places to have a nice Stay</h3>
+    <div id="see"><button>Attractions</button></div>
+    <h3>Top 5 places to have a nice Stay</h3>
+    <div id="stay"><button>Accommodation</button></div>
+    <h3>Sea Side Trip</h3>
+    <div id="sea"><button>Sea Side</button></div>
+    <div id="reset"><button>clear</button></div>
+</body>
+
+<script>
+  function initMap() {
+
+    var activeMarkers = [];
+    var map;
+    
+    var locationTypes1 = [{
+      name: "Restaurants",
+      locations: [
+        { name: "Gourmet", position: { lat: 53.294992, lng: -6.135755 } }, // Gourmet Food Parlour Dun Laoghaire
+        { name: "Daniel", position: { lat: 53.286649, lng: -6.121777 } }, // Daniel's 
+        { name: "Thai", position: { lat: 53.323868, lng: -6.251101 } }, // Nightmarket Thai
+        { name: "Delahunt", position: { lat: 53.323868, lng: -6.251101 } }, // Delahunt
+        { name: "Guilbaud", position: { lat: 53.338394, lng: -6.253002 } }, // Restaurant Patrick Guilbaud
+      ]
+    }];
+
+    var locationTypes2 = [{
+      name: "Drinks",
+      locations: [
+        { name: "Toners", position: { lat: 53.337757, lng: -6.252428 } }, // Toners 
+        { name: "Doheny", position: { lat: 53.338024, lng: -6.252970 } }, // Doheny & Nesbitt
+        { name: "Hogans", position: { lat: 53.341978, lng: -6.264605 } }, // Hogans
+        { name: "Fade", position: { lat: 53.342971, lng: -6.262812 } }, // Fade Street Social Restaurant 
+        { name: "Peruke", position: { lat: 53.340099, lng: -6.258775 } } // Peruke & Periwig
+      ]
+    }];
+
+    var locationTypes3 = [{
+      name: "Attractions",
+      locations: [
+        { name: "Trinity", position: { lat: 53.343794, lng: -6.254579 } }, // Trinity College Dublin
+        { name: "Oscar", position: { lat: 53.340848, lng: -6.250501 } }, // Monument of Oscar Wild Dublin
+        { name: "Guinness", position: { lat: 53.341874, lng: -6.286709 } }, // Guinness storehouse
+        { name: "Gallery", position: { lat: 53.340906, lng: -6.252502 } }, // National Gallery
+        { name: "Famine", position: { lat: 53.348050, lng: -6.250057 } }, // Famine Mount 
+      ]
+    }];
+    
+    var locationTypes4 = [{
+      name: "Accommodation",
+      locations: [
+        { name: "Buswells", position: { lat: 53.340857, lng: -6.255657 } }, // Buswells Hotel
+        { name: "Westbury", position: { lat: 53.341485, lng: -6.261420 } }, // Westbury Hotel
+        { name: "Merrion", position: { lat: 53.338535, lng: -6.252916 } }, // Merrion Hotel 
+        { name: "Shelbourne", position: { lat: 53.338944, lng: -6.256087 } }, // Shelbourne Hotel 
+        { name: "Fitzwiliam", position: { lat: 53.339407, lng: -6.261448 } }, // Fitzwiliam Hotel 
+      ]
+    }];
+    
+    var locationTypes5 = [{
+      name: "Sea",
+      locations: [
+        { name: "Fish", position: { lat: 53.289284, lng: -6.125383 } }, // Fish Shack Café
+        { name: "Teddys", position: { lat: 53.290520, lng: -6.127653 } }, // Teddys Ice Cream
+        { name: "Harbour", position: { lat: 53.294779, lng: -6.127700 } }, // Harbour 
+        { name: "Sandycove", position: { lat: 53.288656, lng: -6.114498 } }, // Sandycove Beach 
+        { name: "Royal", position: { lat: 53.292286, lng: -6.133668 } }, // Royal Marine Hotel 
+      ]
+    }];
+
+    function addMarker(map, location) {
+      var marker = new google.maps.Marker({
+        position: location.position,
+        map: map,
+        title: location.name
+      });
+
+      var infowindow = new google.maps.InfoWindow({
+        content: location.name
+      });
+
+      marker.addListener('click', function() {
+        infowindow.open(map, marker);
+      });
+
+      activeMarkers.push(marker);
+    }
+
+    function setup() {
+      console.log("setting up");
+
+      map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 12,
+        center: { lng: -6.223231, lat: 53.316624 }
+      });
+
+      for (var i = 0; i < locationTypes1[0].locations.length; i++) {
+        addMarker(map, locationTypes1[0].locations[i]);
+      }
+      for (var j = 0; j < locationTypes2[0].locations.length; j++) {
+        addMarker(map, locationTypes2[0].locations[j]);
+      }
+      for (var h = 0; h < locationTypes3[0].locations.length; h++) {
+        addMarker(map, locationTypes3[0].locations[h]);
+      }
+      for (var k = 0; k < locationTypes4[0].locations.length; k++) {
+        addMarker(map, locationTypes4[0].locations[k]);
+      }
+      for (var s = 0; s < locationTypes5[0].locations.length; s++) {
+        addMarker(map, locationTypes5[0].locations[s]);
+      }
+    }
+
+    function clearAllMarkers() {
+      console.log("clearing markers");
+      for (var i = 0; i < activeMarkers.length; i++) {
+        var marker = activeMarkers[i];
+        marker.setMap();
+      }
+
+      activeMarkers = [];
+    }
+
+
+    setup();
+
+    $("#reset").click(function() {
+      for (var j = 0; j < locationTypes2[0].locations.length; j++) {
+        addMarker(map, locationTypes2[0].locations[j]);
+      }
+      for (var h = 0; h < locationTypes4[0].locations.length; h++) {
+        addMarker(map, locationTypes4[0].locations[h]);
+      }
+      for (var i = 0; i < locationTypes1[0].locations.length; i++) {
+        addMarker(map, locationTypes1[0].locations[i]);
+      }
+      for (var h = 0; h < locationTypes3[0].locations.length; h++) {
+        addMarker(map, locationTypes3[0].locations[h]);
+      }
+      for (var s = 0; s < locationTypes5[0].locations.length; s++) {
+        addMarker(map, locationTypes5[0].locations[s]);
+      }
+    });
+
+    $("#bandr").click(function() {
+      clearAllMarkers();
+      for (var j = 0; j < locationTypes2[0].locations.length; j++) {
+        addMarker(map, locationTypes2[0].locations[j]);
+      }
+      console.log("drinks");
+    });
+
+    $("#stay").click(function() {
+      clearAllMarkers();
+      for (var h = 0; h < locationTypes4[0].locations.length; h++) {
+        addMarker(map, locationTypes4[0].locations[h]);
+      }
+      console.log("Places to stay");
+    });
+
+    $("#Resturants").click(function() {
+      clearAllMarkers();
+      for (var i = 0; i < locationTypes1[0].locations.length; i++) {
+        addMarker(map, locationTypes1[0].locations[i]);
+      }
+      console.log("Food");
+    });
+
+    $("#see").click(function() {
+      clearAllMarkers();
+      for (var h = 0; h < locationTypes3[0].locations.length; h++) {
+        addMarker(map, locationTypes3[0].locations[h]);
+      }
+      console.log("Saw that");
+    });
+    
+    $("#sea").click(function() {
+      clearAllMarkers();
+      for (var s = 0; s < locationTypes5[0].locations.length; s++) {
+        addMarker(map, locationTypes5[0].locations[s]);
+      }
+      console.log("Saw that");
+    });
+
+  }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNe6UmR7Cb_o__XnRezEUk17J7li0-Xhg&callback=initMap"></script>
+
+
+</html>

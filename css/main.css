@@ -16,15 +16,14 @@
     font-size: 55px;
 }
 
-carouselheadatt
-
-carouselpatt
-
-
 #map {
         height: 400px;
         width: 100%;
         margin: 5px;
 }
 
+#footer {
+    background-color: whitesmoke;
+    color: black;
+}
 

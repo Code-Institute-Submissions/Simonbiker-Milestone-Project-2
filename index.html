@@ -6,13 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>A Dubliner's Choice</title>
-  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script> 
-  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   <link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.min.css" type="text/css" />
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/main.css" type="text/css" />
-
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="Home">Home<span class="sr-only">(current)</span></a>
+    <a class="navbar-brand" href="#top">Home<span class="sr-only">(current)</span></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -22,19 +20,19 @@
           <a class="nav-link" href="#map">Map</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Attractions">Attractions</a>
+          <a class="nav-link" href="#places">Attractions</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="BarRest">Bars & Restaurants</a>
+          <a class="nav-link" href="#b&rc">Bars & Restaurants</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Accommodation">Accommodation</a>
+          <a class="nav-link" href="#sleep">Accommodation</a>
         </li>
       </ul>
-    <!--  <form class="form-inline my-2 my-lg-0">
+      <!--  <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="text" placeholder="Search">
         <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-      </form> --> 
+      </form> -->
     </div>
   </nav>
 </head>
@@ -44,25 +42,26 @@
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img class="d-block w-100" src="images/dublin.jpg" alt="First slide">
-        <div id ="carouselblock" class="carousel-caption d-none d-md-block">
-          <h2 id ="carouselhead">Fáiltíonn Míle</h2>
+        <div id="carouselblock" class="carousel-caption d-none d-md-block">
+          <h2 id="carouselhead">Fáiltíonn Míle</h2>
           <p id="carouselp">A thousand welcomes</p>
-          <a id ="carouselbutton" class="btn btn-primary btn-lg" href="#map" role="button">Dublin Map</a>
+          <a id="carouselbutton" class="btn btn-primary btn-lg" href="#map" role="button">Dublin Map</a>
         </div>
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" src="images/Sandycove.jpg" alt="Second slide">
-        <div id ="carouselblock" class="carousel-caption d-none d-md-block">
-          <h2 id="carouselheadatt">Things to do</h2>
-          <p id="carouselpatt">One city many faces</p>
-          <a id ="carouselbutton2" class="btn btn-primary btn-lg" href="#" role="button">Attractions</a>
+        <img class="d-block w-100" src="images/sandycovew.jpg" alt="Second slide">
+        <div id="carouselblock" class="carousel-caption d-none d-md-block">
+          <h2 id="carouselhead">Things to do</h2>
+          <p id="carouselp">One city many faces</p>
+          <a id="carouselbutton" class="btn btn-primary btn-lg" href="#places" role="button">Attractions</a>
         </div>
       </div>
       <div class="carousel-item">
         <img class="d-block w-100" src="images/dublin2.jpg" alt="Third slide">
-        <div class="carousel-caption d-none d-md-block">
-          <h2>...</h2>
-          <p>...</p>
+        <div id="carouselblock" class="carousel-caption d-none d-md-block">
+          <h2 id="carouselhead">Places to Stay</h2>
+          <p id="carouselp">Best hotel in the center of city</p>
+          <a id="carouselbutton" class="btn btn-primary btn-lg" href="#sleep" role="button">Accommodation</a>
         </div>
       </div>
     </div>
@@ -75,95 +74,521 @@
     <span class="sr-only">Next</span>
   </a>
   </div>
-
+  <!--Intro -->
   <div class="jumbotron">
     <h1 class="display-3">A Dubliner's Choice</h1>
     <p class="lead">Here you find some choice picks from a native Dubliner and a few places that every new comer should come and see.</p>
     <hr class="my-4">
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    <p>If you click on the Dublin map below you will see all that Dublin has to offer. Some of these places I go to have dinner or enjoy drinks with friends.
+      <p>The attractions I have chosen are eiter well known tourst destations or have some reavance to the current times in the world.</p>
+      I hope you enjpy your stay in my home town and don't be afraid to ask a Dubliner for help, we might join you for a pint. </p>
     <p class="lead">
-      <a class="btn btn-primary btn-lg" href="#" role="button">Dublin Map</a>
+      <a class="btn btn-primary btn-lg" href="#map" role="button">Dublin Map</a>
     </p>
   </div>
+  <!--Choices -->
   <div class="jumbotron">
     <div class="row">
       <div class="col-lg-4">
         <div class="card text-white bg-success mb-3" style="max-width: 20rem;">
           <div class="card-header">Attractions</div>
           <div class="card-body">
-            <h4 class="card-title">Success card title</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h4 class="card-title">Top Choices </h4>
+            <p class="card-text">If you click the button below you see some information as to why I chose these places and if you go to the map you will see where they are.</p>
           </div>
         </div>
-        <button type="button" class="btn btn-outline-success">Success</button>
+        <a class="btn btn-success btn-lg" href="#places" role="button">Attractions</a>
       </div>
       <div class="col-lg-4">
         <div class="card text-white bg-info mb-3" style="max-width: 20rem;">
-          <div class="card-header">bars and restaurants</div>
+          <div class="card-header">Bars & Restaurants</div>
           <div class="card-body">
-            <h4 class="card-title">Danger card title</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h4 class="card-title">My Personal favourties</h4>
+            <p class="card-text">Ireland has some of the best food in Europe. What ever your taste you will find it here. I go to some of these places on the weekend and others for special occasions.
+            </p>
           </div>
         </div>
-        <button type="button" class="btn btn-outline-info">Danger</button>
+        <a class="btn btn-info btn-lg" href="#b&rc" role="button">Bars & Restaurants</a>
       </div>
       <div class="col-lg-4">
         <div class="card text-white bg-secondary mb-3" style="max-width: 20rem;">
           <div class="card-header">Accommodation</div>
           <div class="card-body">
-            <h4 class="card-title">Warning card title</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h4 class="card-title">Central or Air b&b</h4>
+            <p class="card-text">If you want to be in the centre of Dublin the five places I have chosen are perfect. If you want to be outside the city Air b&b would be a good idea.</p>
           </div>
         </div>
-        <button type="button" class="btn btn-outline-secondary">Warning</button>
+        <a class="btn btn-secondary btn-lg" href="#b&rc" role="button">Accommodation</a>
       </div>
     </div>
   </div>
+  <!--MAP -->
   <div class="jumbotron">
     <h2 class="display-3">Dublin</h2>
     <div id="map"></div>
     <hr class="my-4">
     <div class="row">
+      <div class="col-lg-3">
+        <button id="see" type="button" class="btn btn-success">Attractions</button>
+      </div>
+      <div class="col-lg-3">
+        <button id="bar" type="button" class="btn btn-danger">Bars</button>
+      </div>
+      <div class="col-lg-3">
+        <button id="Resturants" type="button" class="btn btn-secondary">Restaurants</button>
+      </div>
+      <div class="col-lg-3">
+        <button id="stay" type="button" class="btn btn-success">Accommodation</button>
+      </div>
+    </div>
+    <hr class="my-4">
+    <div class="row">
+      <div class="col-lg-6">
+        <button id="sea" type="button" class="btn btn-info">Sea Side</button>
+      </div>
+      <div class="col-lg-6">
+        <button id="reset" type="button" class="btn btn-primary">Restart Map</button>
+      </div>
+    </div>
+  </div>
+  <div id="places" class="jumbotron">
+    <h2 class="display-3">Attractions</h2>
+    <div class="row">
       <div class="col-lg-4">
-        <button id="attr" type="button" class="btn btn-success">Attractions</button>
+        <div class="card mb-3 card text-white bg-primary">
+          <h3 class="card-header">Trinity College</h3>
+          <div class="card-body">
+            <h5 class="card-title">Home to the book of Kells</h5>
+            <h6 class="card-subtitle text-muted">Created in 800 AD</h6>
+          </div>
+          <a href="https://www.tcd.ie/visitors/book-of-kells/" target="_blank">
+          <img style="height: auto; width: 100%; display: block;" src="images/kells.jpg" alt="Book of kells">
+          </a>
+          <div class="card-body">
+            <p class="card-text">Trinity College has been the educating home of my family, the oldest College in Dublin and home to Ireland's oldest book, The book of Kells. This is a must see and locationed in the heart of Dublin, the city desapears in the heart of its walls.
+            </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item card text-white bg-primary">Founded in 1592 by Queen Elizabeth 1</li>
+            <li class="list-group-item card text-white bg-primary">Ranked best in Ireland</li>
+            <li class="list-group-item card text-white bg-primary">Notable people Samuel Beckett & Oscar Wilde</li>
+          </ul>
+          <div class="card-body text-white">
+            <a href="https://www.tcd.ie/visitors/book-of-kells/" class=" text-white alert-link" target="_blank">Book of Kells </a>
+
+          </div>
+          <div class="card-footer text-white">
+            A Must see
+          </div>
+        </div>
       </div>
       <div class="col-lg-4">
-        <button id="bandr" type="button" class="btn btn-info">Bars & Restaurants</button>
+        <div class="card mb-3 card text-white bg-secondary">
+          <h3 class="card-header">National Gallery</h3>
+          <div class="card-body">
+            <h5 class="card-title">Gailearaí Náisiúnta na hÉireann</h5>
+            <h6 class="card-subtitle text-muted">Home of some the best Irish & European art</h6>
+          </div>
+          <a href="https://www.nationalgallery.ie/" target="_blank">
+          <img style="height: auto; width: 100%; display: block;" src="images/gallery.jpg" alt="Card image">
+          </a>
+          <div class="card-body">
+            <p class="card-text">Located beside Leinster house and Clare street. It has an extensive collection of Irish, Italian and Dutch paintings</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item card text-white bg-secondary">Founded in 1854 but the doors did not open until 1864</li>
+            <li class="list-group-item card text-white bg-secondary">Current director is Sean Rainbird</li>
+          </ul>
+          <div class="card-body text-white">
+            <a href="https://www.nationalgallery.ie/" class="text-white alert-link" target="_blank">National Gallery</a>
+          </div>
+          <div class="card-footer text-white">
+            For Art goers
+          </div>
+        </div>
       </div>
       <div class="col-lg-4">
-        <button id="accom"type="button" class="btn btn-secondary">Accommodation</button>
+        <div class="card mb-3 card text-white bg-success">
+          <h3 class="card-header">Guinness Storehouse</h3>
+          <div class="card-body">
+            <h5 class="card-title">Home of the Black stuff</h5>
+            <h6 class="card-subtitle text-muted">9,000 Year lease</h6>
+          </div>
+          <a href="https://www.guinness-storehouse.com/en?gclid=EAIaIQobChMI1eLIjdK32wIVEpkbCh0n2AzfEAAYASAAEgJtOPD_BwE" target="_blank">
+          <img style="height: auto; width: 100%; display: block;" src="images/guinness.jpg" alt="Card image">
+          </a>
+          <div class="card-body">
+            <p class="card-text">The best known drink in the world you will not find a better pint than the Guinness Storehouse. Seven floors with the best view of the city to go with the best pint of Guinness you have ever tasted in the Gravity Bar. Recevied over 4 million
+              vistors since its opening in 2000 you cannot come to Dublin with out coming here.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item card text-white bg-success">Founded by Arthur Guinness </li>
+            <li class="list-group-item card text-white bg-success">Price of admission 20 euros</li>
+          </ul>
+          <div class="card-body">
+            <a href="https://www.guinness-storehouse.com/en?gclid=EAIaIQobChMI1eLIjdK32wIVEpkbCh0n2AzfEAAYASAAEgJtOPD_BwE" class="text-white alert-link" target="_blank">Guinness Storehouse</a>
+          </div>
+          <div class="card-footer text-white">
+            Enjoy your pint
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="my-4">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card mb-3 card text-white bg-danger">
+          <h3 class="card-header">Famine Memorial</h3>
+          <div class="card-body">
+            <h5 class="card-title">1,000,000 Died</h5>
+            <h6 class="card-subtitle text-muted">1,000,000 Emigrated</h6>
+          </div>
+          <img style="height: auto; width: 100%; display: block;" src="images/famine.jpg" alt="Book of kells">
+          <div class="card-body">
+            <p class="card-text">The Famine is part of Ireland's history caused by a potato diesase and componded by neglaten British landlords. A third of the population was depended on the potato and it caused the fall of the Irish population by 25% With the current global
+              climate I felt this must be added and thought goes out to today's refugee crisis.
+            </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item card text-white bg-danger">Sailed from Custom House Quay</li>
+            <li class="list-group-item card text-white bg-danger">Crafted by Dublin sculptor Rowan Gillespie </li>
+            <li class="list-group-item card text-white bg-danger">Observe remember learn </li>
+          </ul>
+          <div class="card-footer text-white">
+            Please no slefies
+          </div>
+        </div>
       </div>
       <div class="col-lg-4">
-        <button id="reset"type="button" class="btn btn-secondary">Restart Map</button>
+        <div class="card mb-3 card text-white bg-info">
+          <h3 class="card-header">Sandycove</h3>
+          <div class="card-body">
+            <h5 class="card-title">Cuas an Ghainimh</h5>
+            <h6 class="card-subtitle text-muted">Tiny Beach</h6>
+          </div>
+          <a href="http://www.irishrail.ie/about-us/dart-commuter" target="_blank">
+          <img style="height: auto; width: 100%; display: block;" src="images/sandycove.png" alt="Card image">
+          </a>
+          <div class="card-body">
+            <p class="card-text">Sandycove is a very small beach but not lacking in charter. The locale is featured in the opening of James Joyce Ulysses. It is worth taking a break from the city and getting on the dart out to Dun Laoghaire. Walk down to beach popping into
+              Teddys Ice Cream along the way and enjoying the fresh sea air. If you are hungery pop into the Fish Shake Cafe where the best fish in Dublin can be had.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item card text-white bg-info">Click the sea side button below the map</li>
+            <li class="list-group-item card text-white bg-info">Dart is the best way to get out there</li>
+          </ul>
+          <div class="card-body">
+            <a href="http://www.irishrail.ie/about-us/dart-commuter" class="text-white alert-link" target="_blank">The Dart</a>
+          </div>
+          <div class="card-footer text-white">
+            Enjoy the air
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="b&rc" class="jumbotron">
+    <h2 class="display-3">Bars & Restaurants</h2>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Bar or Restaurant</th>
+          <th scope="col">Name</th>
+          <th scope="col">Personal recmandation</th>
+          <th scope="col">Booking</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-active">
+          <th scope="row">Restaurant</th>
+          <td>Fish Shack Cafe</td>
+          <td>Favourite place</td>
+          <td><a href="http://www.fishshack.ie/" class="btn btn-primary" role="button" target="_blank">Website</a></td>
+        </tr>
+        <tr>
+          <th scope="row">Restaurant</th>
+          <td>Patrick Guilbaud</td>
+          <td>Special occasions</td>
+          <td><a href="https://restaurantpatrickguilbaud.ie/" class="btn btn-primary" role="button" target="_blank">Website</a></td>
+        </tr>
+        <tr class="table-primary">
+          <th scope="row">Restaurant</th>
+          <td>Daniel's</td>
+          <td>Favourite</td>
+          <td>01 284 1027</td>
+        </tr>
+        <tr class="table-secondary">
+          <th scope="row">Bar & Restaurant</th>
+          <td>Delahunt</td>
+          <td>Fantastic</td>
+          <td><a href="https://delahunt.ie/" role="button" class="btn btn-primary" target="_blank">Website</a></td>
+        </tr>
+        <tr class="table-success">
+          <th scope="row">Restaurant</th>
+          <td>Nightmarket Thai</td>
+          <td>Fantastic</td>
+          <td><a href="https://www.nightmarket.ie/" class="btn btn-primary" role="button" target="_blank">Website</a></td>
+        </tr>
+        <tr class="table-danger">
+          <th scope="row">Bar</th>
+          <td>Toners</td>
+          <td>An Irish Experance</td>
+          <td><a href="http://www.tonerspub.ie/" class="btn btn-primary" role="button" target="_blank">Website</a></td>
+        </tr>
+        <tr class="table-warning">
+          <th scope="row">Bar</th>
+          <td>Doheny & Nesbitt</td>
+          <td>An Irish Experance</td>
+          <td><a href="http://dohenyandnesbitts.ie/" class="btn btn-primary" role="button" target="_blank">Website</a></td>
+        </tr>
+        <tr class="table-info">
+          <th scope="row">Bar</th>
+          <td>Hogans</td>
+          <td>Fantastic</td>
+          <td><a href="https://www.dublintown.ie/business/hogans/" class="btn btn-primary" role="button" target="_blank">Website</a></td>
+        </tr>
+        <tr class="table-light">
+          <th scope="row">Bar & Restaurant</th>
+          <td>Fade Street Social</td>
+          <td>Fantastic</td>
+          <td><a href="https://www.fadestreetsocial.com/" class="btn btn-primary" role="button" target="_blank">Website</a></td>
+        </tr>
+        <tr class="table-dark">
+          <th scope="row">Bar & Restaurant</th>
+          <td>Peruke & Periwig</td>
+          <td>Favourite place</td>
+          <td><a href="https://peruke.ie/" class="btn btn-primary" role="button" target="_blank">Website</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div id="sleep" class="jumbotron">
+    <h2 class="display-3">Accommodation</h2>
+    <hr class="my-4">
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+          <div class="card-header">Buswells Hotel</div>
+          <div class="card-body">
+            <h4 class="card-title">Trip Advisor</h4>
+            <a href="http://www.buswells.ie/" target="_blank">
+            <img style="height: auto; width: 100%; display: block;" src="images/buswells.jpg" alt="Hotel">
+            </a>
+            <div class="card-body text-white">
+              <p class="card-text">In the centre of Dublin with everything at your doorstep.</p>
+            </div>
+            <div class="card-body text-white">
+              <a href="http://www.buswells.ie/" class=" text-white alert-link" target="_blank">Make a booking </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3">
+        <div class="card text-white bg-secondary mb-3" style="max-width: 20rem;">
+          <div class="card-header">Westbury Hotel</div>
+          <div class="card-body">
+            <h4 class="card-title">5 Star Boutique</h4>
+            <a href="http://www.westburymayfair.com/#local-area/?PS=LGEN_AA_DEMA_CGGL_TPRP&SWAQ=7M96&audland=&audbrand=&auddest=" target="_blank">
+            <img style="height: auto; width: 100%; display: block;" src="images/61.jpg" alt="Hotel">
+            </a>
+            <div class="card-body text-white">
+              <p class="card-text">Right beside Grafton Street perfect for shopping.</p>
+            </div>
+            <div class="card-body text-white">
+              <a href="http://www.westburymayfair.com/#local-area/?PS=LGEN_AA_DEMA_CGGL_TPRP&SWAQ=7M96&audland=&audbrand=&auddest=" class=" text-white alert-link" target="_blank">Make a booking </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="card text-white bg-info mb-3" style="max-width: 20rem;">
+          <div class="card-header">Merrion Hotel</div>
+          <div class="card-body">
+            <h4 class="card-title">5 Star Luxury</h4>
+            <a href="http://www.merrionhotel.com/=" target="_blank">
+            <img style="height: auto; width: 100%; display: block;" src="images/merrion.jpg" alt="Hotel">
+            </a>
+            <div class="card-body text-white">
+              <p class="card-text">Merrion is home to Guilbaud the only two michelin star restaurant in Dublin, spa and very close to Merrion square.</p>
+            </div>
+            <div class="card-body text-white">
+              <a href="http://www.merrionhotel.com/=" class=" text-white alert-link" target="_blank">Make a booking </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="card text-white bg-danger mb-3" style="max-width: 20rem;">
+          <div class="card-header">Shelbourne Hotel</div>
+          <div class="card-body">
+            <h4 class="card-title">Champagne Afternoon Tea</h4>
+            <a href="https://www.theshelbournevouchers.ie/afternoon-tea-vouchers?gclid=EAIaIQobChMI2-eDuIS42wIVxG4bCh2O9gCPEAAYASAAEgIe-fD_BwE" target="_blank">
+            <img style="height: auto; width: 100%; display: block;" src="images/shelbourne.jpg" alt="Hotel">
+            </a>
+            <div class="card-body text-white">
+              <p class="card-text">Afternoon Tea which can be walked off right bside St Stephen's Green.</p>
+            </div>
+            <div class="card-body text-white">
+              <a href="https://www.theshelbournevouchers.ie/afternoon-tea-vouchers?gclid=EAIaIQobChMI2-eDuIS42wIVxG4bCh2O9gCPEAAYASAAEgIe-fD_BwE" class=" text-white alert-link" target="_blank">Make a booking </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3">
+        <div class="card text-white bg-dark mb-3" style="max-width: 20rem;">
+          <div class="card-header">Fitzwiliam Hotel</div>
+          <div class="card-body">
+            <h4 class="card-title">Champagne Afternoon Tea</h4>
+            <a href="https://www.fitzwilliamhoteldublin.com/" target="_blank">
+            <img style="height: auto; width: 100%; display: block;" src="images/fitz.jpg" alt="Hotel">
+            </a>
+            <div class="card-body text-white">
+              <p class="card-text">Great view over St Stephen's Green and the city centre. At the top of Grafton Street next to the luas were you can go anywhere in the city.</p>
+            </div>
+            <div class="card-body text-white">
+              <a href="https://www.fitzwilliamhoteldublin.com/" class=" text-white alert-link" target="_blank">Make a booking </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3">
+        <div class="card text-white bg-success mb-3" style="max-width: 20rem;">
+          <div class="card-header">Royal Marine Hotel</div>
+          <div class="card-body">
+            <h4 class="card-title">Hotel by the Sea</h4>
+            <a href="http://www.royalmarine.ie/?r=3748031&keyword=royal%20marine%20hotel&gclid=EAIaIQobChMIz9-Q54y42wIVh7HtCh0TwwAzEAAYASAAEgLk2_D_BwE" target="_blank">
+            <img style="height: auto; width: 100%; display: block;" src="images/royal.jpg" alt="Hotel">
+            </a>
+            <div class="card-body text-white">
+              <p class="card-text">If you are looking to outside the city and smell of fresh sea air then this is the location for you.</p>
+            </div>
+            <div class="card-body text-white">
+              <a href="http://www.royalmarine.ie/?r=3748031&keyword=royal%20marine%20hotel&gclid=EAIaIQobChMIz9-Q54y42wIVh7HtCh0TwwAzEAAYASAAEgLk2_D_BwE" class=" text-white alert-link" target="_blank">Make a booking </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </body>
-
+<!--MAP JavaScript-->
 <script>
   function initMap() {
 
-    //var marker = new google.maps.Marker({});
-
     var activeMarkers = [];
     var map;
-    
+
     var locationTypes1 = [{
       name: "Restaurants",
-      locations: [
-        { name: "Fish", position: { lat: 53.289284, lng: -6.125384 } }, // Fish Shake Cafe
-        { name: "Daniel", position: { lat: 53.286649, lng: -6.121777 } }, // Daniel's 
+      locations: [{
+          name: `<h5>Gourmet Food Parlour</h5>` + `<h6><a href="http://gourmetfoodparlour.com//" target="_blank">Bookings</a></h6>`,
+          position: { lat: 53.294992, lng: -6.135755 }
+        }, // Gourmet Food Parlour Dun Laoghaire
+        {
+          name: `<h5>Daniel's</h5>` + `<h6><a>Booking 01 284 1027</a></h6>`,
+          position: { lat: 53.286649, lng: -6.121777 }
+        }, // Daniel's 
+        {
+          name: `<h5>Nightmarket Thai</h5>` + `<h6><a href="https://www.nightmarket.ie/" target="_blank">Bookings</a></h6>`,
+          position: { lat: 53.323868, lng: -6.251101 }
+        }, // Nightmarket Thai
+        {
+          name: `<h5>Delahunt</h5>` + `<h6><a href="https://delahunt.ie/" target="_blank">Bookings</a></h6>`,
+          position: { lat: 53.323868, lng: -6.251101 }
+        }, // Delahunt
+        {
+          name: `<h5>Restaurant Patrick Guilbaud</h5>` + `<h6><a href="https://restaurantpatrickguilbaud.ie/" target="_blank">Bookings</a></h6>`,
+          position: { lat: 53.338394, lng: -6.253002 }
+        }, // Restaurant Patrick Guilbaud
       ]
     }];
 
     var locationTypes2 = [{
       name: "Drinks",
+      locations: [{
+          name: `<h5>Toners</h5>` + `<h6><a href="http://www.tonerspub.ie/" target="_blank">What's the bar like</a></h6>`,
+          position: { lat: 53.337757, lng: -6.252428 }
+        }, // Toners 
+        {
+          name: `<h5>Doheny & Nesbitt</h5>` + `<h6><a href="http://dohenyandnesbitts.ie/" target="_blank">What's the bar like</a></h6>`,
+          position: { lat: 53.338024, lng: -6.252970 }
+        }, // Doheny & Nesbitt
+        {
+          name: `<h5>Hogans</h5>` + `<h6><a href="https://www.dublintown.ie/business/hogans/" target="_blank">What's the bar like</a></h6>`,
+          position: { lat: 53.341978, lng: -6.264605 }
+        }, // Hogans
+        {
+          name: `<h5>Fade Street Social Restaurant</h5>` + `<h6><a href="https://www.fadestreetsocial.com/" target="_blank">Bookings</a></h6>`,
+          position: { lat: 53.342971, lng: -6.262812 }
+        }, // Fade Street Social Restaurant 
+        {
+          name: `<h5>Peruke & Periwig</h5>` + `<h6><a href="https://peruke.ie/" target="_blank">What's the bar like</a></h6>`,
+          position: { lat: 53.340099, lng: -6.258775 }
+        } // Peruke & Periwig
+      ]
+    }];
+
+    var locationTypes3 = [{
+      name: "Attractions",
       locations: [
-        { name: "Toners", position: { lat: 53.337757, lng: -6.252428 } }, // Toners 
-        { name: "Doheny", position: { lat: 53.338024, lng: -6.252970 } }, // Doheny & Nesbitt
-        { name: "Hogans", position: { lat: 53.341978, lng: -6.264605 } }, // Hogans
-        { name: "Fade", position: { lat: 53.342971, lng: -6.262812 } }, // Fade Street Social Restaurant 
-        { name: "Peruke", position: { lat: 53.340099, lng: -6.258775 } } // Peruke & Periwig
+        { name: "Trinity", position: { lat: 53.343794, lng: -6.254579 } }, // Trinity College Dublin
+        { name: "Oscar", position: { lat: 53.340848, lng: -6.250501 } }, // Monument of Oscar Wild Dublin
+        { name: "Guinness", position: { lat: 53.341874, lng: -6.286709 } }, // Guinness storehouse
+        { name: "Gallery", position: { lat: 53.340906, lng: -6.252502 } }, // National Gallery
+        { name: "Famine", position: { lat: 53.348050, lng: -6.250057 } }, // Famine Mount 
+      ]
+    }];
+
+    var locationTypes4 = [{
+      name: "Accommodation",
+      locations: [{
+          name: `<h5>Buswells Hotel</h5>` + `<h6><a href="http://www.buswells.ie/" target="_blank">Enjoy your stay</a></h6>`,
+          position: { lat: 53.340857, lng: -6.255657 }
+        }, // Buswells Hotel
+        {
+          name: `<h5>Westbury Hotel</h5>` + `<h6><a href="http://www.westburymayfair.com/#local-area/?PS=LGEN_AA_DEMA_CGGL_TPRP&SWAQ=7M96&audland=&audbrand=&auddest=" target="_blank">Enjoy your stay</a></h6>`,
+          position: { lat: 53.341485, lng: -6.261420 }
+        }, // Westbury Hotel
+        {
+          name: `<h5>Merrion Hotel</h5>` + `<h6><a href="http://www.merrionhotel.com/=" target="_blank">Enjoy your stay</a></h6>`,
+          position: { lat: 53.338535, lng: -6.252916 }
+        }, // Merrion Hotel 
+        {
+          name: `<h5>Shelbourne Hotel</h5>` + `<h6><a href="https://www.theshelbournevouchers.ie/afternoon-tea-vouchers?gclid=EAIaIQobChMI2-eDuIS42wIVxG4bCh2O9gCPEAAYASAAEgIe-fD_BwE" target="_blank">Enjoy your stay</a></h6>`,
+          position: { lat: 53.338944, lng: -6.256087 }
+        }, // Shelbourne Hotel 
+        {
+          name: `<h5>Fitzwiliam Hotel</h5>` + `<h6><a href="https://www.fitzwilliamhoteldublin.com/" target="_blank">Enjoy your stay</a></h6>`,
+          position: { lat: 53.339407, lng: -6.261448 }
+        }, // Fitzwiliam Hotel 
+      ]
+    }];
+
+    var locationTypes5 = [{
+      name: "Sea",
+      locations: [{
+          name: `<h5>Fish Shack Café</h5>` + `<h6><a href="https://www.fishshack.ie/" target="_blank">Menu</a></h6>`,
+          position: { lat: 53.289284, lng: -6.125383 }
+        }, // Fish Shack Café
+        {
+          name: `<h5>Teddys Ice Cream</h5>` + `<h6><a href="https://http://teddys.ie//" target="_blank">All kings of flavours</a></h6>`,
+          position: { lat: 53.290520, lng: -6.127653 }
+        }, // Teddys Ice Cream
+        {
+          name: `<h5>Dun Laoghaire Harbour</h5>` + `<h6><a></a></h6>`,
+          position: { lat: 53.294779, lng: -6.127700 }
+        }, // Harbour 
+        {
+          name: `<h5>Sandycove Beach</h5>` + `<h6><a></a></h6>`,
+          position: { lat: 53.288656, lng: -6.114498 }
+        }, // Sandycove Beach 
+        {
+          name: `<h5>Royal Marine Hotel</h5>` + `<h6><a href="https://http://www.royalmarine.ie/?r=3748031&keyword=royal%20marine%20hotel&gclid=EAIaIQobChMIz9-Q54y42wIVh7HtCh0TwwAzEAAYASAAEgLk2_D_BwE//" target="_blank">Bookings</a></h6>`,
+          position: { lat: 53.292286, lng: -6.133668 }
+        }, // Royal Marine Hotel 
       ]
     }];
 
@@ -186,9 +611,9 @@
     }
 
     function setup() {
-      console.log("setting up")
+      console.log("setting up");
 
-      var map = new google.maps.Map(document.getElementById('map'), {
+      map = new google.maps.Map(document.getElementById('map'), {
         zoom: 12,
         center: { lng: -6.223231, lat: 53.316624 }
       });
@@ -199,12 +624,21 @@
       for (var j = 0; j < locationTypes2[0].locations.length; j++) {
         addMarker(map, locationTypes2[0].locations[j]);
       }
+      for (var h = 0; h < locationTypes3[0].locations.length; h++) {
+        addMarker(map, locationTypes3[0].locations[h]);
+      }
+      for (var k = 0; k < locationTypes4[0].locations.length; k++) {
+        addMarker(map, locationTypes4[0].locations[k]);
+      }
+      for (var s = 0; s < locationTypes5[0].locations.length; s++) {
+        addMarker(map, locationTypes5[0].locations[s]);
+      }
     }
 
     function clearAllMarkers() {
       console.log("clearing markers");
-      for (var j = 0; j < activeMarkers.length; j++) {
-        var marker = activeMarkers[j];
+      for (var i = 0; i < activeMarkers.length; i++) {
+        var marker = activeMarkers[i];
         marker.setMap();
       }
 
@@ -215,32 +649,95 @@
     setup();
 
     $("#reset").click(function() {
+      for (var j = 0; j < locationTypes2[0].locations.length; j++) {
+        addMarker(map, locationTypes2[0].locations[j]);
+      }
+      for (var h = 0; h < locationTypes4[0].locations.length; h++) {
+        addMarker(map, locationTypes4[0].locations[h]);
+      }
+      for (var i = 0; i < locationTypes1[0].locations.length; i++) {
+        addMarker(map, locationTypes1[0].locations[i]);
+      }
+      for (var h = 0; h < locationTypes3[0].locations.length; h++) {
+        addMarker(map, locationTypes3[0].locations[h]);
+      }
+      for (var s = 0; s < locationTypes5[0].locations.length; s++) {
+        addMarker(map, locationTypes5[0].locations[s]);
+      }
+    });
+
+    $("#bar").click(function() {
       clearAllMarkers();
-
+      for (var j = 0; j < locationTypes2[0].locations.length; j++) {
+        addMarker(map, locationTypes2[0].locations[j]);
+      }
+      console.log("drinks");
     });
 
-    //var markers = locations.map(function(location, i) {
-    //    return new google.maps.Marker({
-    //        position: location,
-    //    });
-
-    $("#bandr").click(function() {
-      addMarker(map,{locationTypes1});
-      console.log("did This run");
+    $("#stay").click(function() {
+      clearAllMarkers();
+      for (var h = 0; h < locationTypes4[0].locations.length; h++) {
+        addMarker(map, locationTypes4[0].locations[h]);
+      }
+      console.log("Places to stay");
     });
 
-    $("#accom").click(function() {
-      addMarker();
-      //map.setZoom(15);
-      //map.setCenter({ lng: -6.258575, lat: 53.338978 });
-      console.log("did This run too");
+    $("#Resturants").click(function() {
+      clearAllMarkers();
+      for (var i = 0; i < locationTypes1[0].locations.length; i++) {
+        addMarker(map, locationTypes1[0].locations[i]);
+      }
+      console.log("Food");
+    });
+
+    $("#see").click(function() {
+      clearAllMarkers();
+      for (var h = 0; h < locationTypes3[0].locations.length; h++) {
+        addMarker(map, locationTypes3[0].locations[h]);
+      }
+      console.log("Saw that");
+    });
+
+    $("#sea").click(function() {
+      clearAllMarkers();
+      for (var s = 0; s < locationTypes5[0].locations.length; s++) {
+        addMarker(map, locationTypes5[0].locations[s]);
+      }
+      console.log("Saw that");
     });
 
   }
 </script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNe6UmR7Cb_o__XnRezEUk17J7li0-Xhg&callback=initMap"></script>
-
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<footer>
+  <div id="footer" class="jumbotron">
+    <div class="row">
+      <div class="col-lg-3">  
+        <a href="https://www.met.ie/forecasts/national-forecast" class="alert-link" target="_blank">Weather</a>
+      </div>
+      <div class="col-lg-3">  
+        <a href="https://www.transportforireland.ie/dublin-bus/" class="alert-link"  target="_blank">Transport</a>
+     </div>
+     <div class="col-lg-3">   
+        <a href="https:http://www.touristofficedublin.com/" class="alert-link"  target="_blank">Tourest Information</a>
+      </div>  
+      <div class="col-lg-3">
+        <a href="#top">Back to top</a>
+      </div>
+    </div>
+    <hr class="my-4">
+    <div>
+        <a>Made by Simon Mac Aree</a>
+        <a>All the information has been taken from local sources</a>
+        <a>The rates are my own opion and should be taken as such.</a>
+    </div>  
+    
+  </div>
+</footer>
 
 </html>
