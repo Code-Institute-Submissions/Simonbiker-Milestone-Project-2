@@ -187,6 +187,8 @@ function initAutocomplete() {
       for (var s = 0; s < locationTypes5[0].locations.length; s++) {
         addMarker(map, locationTypes5[0].locations[s]);
       }
+      map.setZoom(12),
+      map.setCenter({ lng: -6.223231, lat: 53.316624 });
     });
 
     $("#bar").click(function() {
@@ -194,6 +196,8 @@ function initAutocomplete() {
       for (var j = 0; j < locationTypes2[0].locations.length; j++) {
         addMarker(map, locationTypes2[0].locations[j]);
       }
+      map.setZoom(14),
+      map.setCenter({ lng: -6.260458, lat: 53.339690 });
       console.log("drinks");
     });
 
@@ -202,6 +206,8 @@ function initAutocomplete() {
       for (var h = 0; h < locationTypes4[0].locations.length; h++) {
         addMarker(map, locationTypes4[0].locations[h]);
       }
+      map.setZoom(14),
+      map.setCenter({ lng: -6.259632, lat: 53.340688 });
       console.log("Places to stay");
     });
 
@@ -210,6 +216,8 @@ function initAutocomplete() {
       for (var i = 0; i < locationTypes1[0].locations.length; i++) {
         addMarker(map, locationTypes1[0].locations[i]);
       }
+      map.setZoom(12),
+      map.setCenter({ lng: -6.223231, lat: 53.316624 });
       console.log("Food");
     });
 
@@ -218,6 +226,8 @@ function initAutocomplete() {
       for (var h = 0; h < locationTypes3[0].locations.length; h++) {
         addMarker(map, locationTypes3[0].locations[h]);
       }
+      map.setZoom(14),
+      map.setCenter({ lng: -6.263108, lat: 53.346324 });
       console.log("Saw that");
     });
 
@@ -226,6 +236,8 @@ function initAutocomplete() {
       for (var s = 0; s < locationTypes5[0].locations.length; s++) {
         addMarker(map, locationTypes5[0].locations[s]);
       }
+      map.setZoom(14),
+      map.setCenter({ lng: -6.123634, lat: 53.290784 });
       console.log("Saw that");
     });
 
