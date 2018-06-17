@@ -2,7 +2,8 @@ function initAutocomplete() {
 
     var activeMarkers = [];
     var map;
-
+    
+    /////////////////////////////////////////////Locations and specfic detials /////////////////////////////////////////////////////
     var locationTypes1 = [{
       name: "Restaurants",
       locations: [{
@@ -114,7 +115,7 @@ function initAutocomplete() {
       ]
     }];
 
-    // This function adds markers
+    /////////////////////////////////////////////Adding Markers /////////////////////////////////////////////////////
     function addMarker(map, location) {
       var marker = new google.maps.Marker({
         position: location.position,
@@ -241,7 +242,7 @@ function initAutocomplete() {
       console.log("Saw that");
     });
 
-    // Search Bar 
+    /////////////////////////////////////////////////// Search Bar ////////////////////////////////////////////////////
     var input = document.getElementById('pac-input');
     var searchBox = new google.maps.places.SearchBox(input);
     map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
@@ -287,7 +288,7 @@ function initAutocomplete() {
           map: map,
           icon: icon,
           title: place.name,
-          position: place.geometry.location
+          position: place.geometry.location,
         }));
 
         if (place.geometry.viewport) {
