@@ -171,6 +171,8 @@ function initAutocomplete() {
 
     setup();
 
+    ///////////////////////////////////////Buttons for outside the map ///////////////////////////////////////////////
+
     $("#reset").click(function() {
 
       for (var j = 0; j < locationTypes2[0].locations.length; j++) {
@@ -280,7 +282,7 @@ function initAutocomplete() {
           size: new google.maps.Size(71, 71),
           origin: new google.maps.Point(0, 0),
           anchor: new google.maps.Point(17, 34),
-          scaledSize: new google.maps.Size(25, 25)
+          scaledSize: new google.maps.Size(25, 25),
         };
 
         // Create a marker for each place.
